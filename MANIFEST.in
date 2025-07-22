@@ -1,0 +1,2 @@
+recursive-include gridh_pages/templates *
+recursive-include gridh_pages/templatetags *

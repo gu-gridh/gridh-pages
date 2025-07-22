@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gridh-pages"
+version = "0.1"
+dependencies = [
+    "django>=5.2",
+]
+description = "A Django app to create simple static pages for projects."
+readme = "README.rst"
+requires-python = ">= 3.12"
+authors = [
+    {name = "Julia Beck", email = "julia.beck@lir.gu.se"},
+]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 5.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]

@@ -1,0 +1,14 @@
+<footer>
+    <div class="footer-content">
+      <div class="links-stack">
+        {% for link in links %}
+          <a class="{{ link.type }}" href="{{ link.url }}">{{ link.name }}</a>
+        {% endfor %}
+      </div>
+      <div class="partners">
+        {% for partner in partners %}
+          <a href="{{ partner.url }}">{{ partner.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </footer>

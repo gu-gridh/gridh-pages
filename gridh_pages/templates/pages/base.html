@@ -1,0 +1,22 @@
+{% load static %}
+{% load navigation %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% project_name %}</title>
+    <meta charset="utf-8"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'css/minified.css' %}">
+  </head>
+  <body>
+    <header>
+        {% render_navigation %}
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% render_footer %}
+</body>
+</html>
