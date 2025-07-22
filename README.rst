@@ -3,6 +3,7 @@ gridh-pages
 ============
 
 WORK_IN_PROGRESS
+
 gridh-pages is a Django app to create simple static pages for django projects. 
 
 Quick start
