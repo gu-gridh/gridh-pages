@@ -12,7 +12,7 @@ description = "A Django app to create simple static pages for projects."
 readme = "README.rst"
 requires-python = ">= 3.12"
 authors = [
-    {name = "Julia Beck", email = "julia.beck@lir.gu.se"},
+    {name = "Julia Beck"},
 ]
 classifiers = [
     "Environment :: Web Environment",

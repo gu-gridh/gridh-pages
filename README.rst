@@ -4,7 +4,7 @@ gridh-pages
 
 WORK_IN_PROGRESS
 
-gridh-pages is a Django app to create simple static pages for django projects. 
+gridh-pages is a Django app to create simple static pages for django projects. It offers to add pages with a title, slug and content which is a Richtextfield by using the django_prose_editor. It was created with gridh projects in mind but can be used in other contexts, too.
 
 Quick start
 -----------
