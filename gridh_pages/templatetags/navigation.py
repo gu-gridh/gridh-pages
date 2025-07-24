@@ -7,7 +7,7 @@ register = template.Library()
 
 @register.inclusion_tag('pages/navigation.html')
 def render_navigation():
-    pages = Page.objects.all()
+    pages = Page.objects.all().order_by('order')
     return {'pages': pages}
 
 

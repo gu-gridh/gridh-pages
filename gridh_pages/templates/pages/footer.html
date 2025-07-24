@@ -1,8 +1,10 @@
 <footer>
     <div class="footer-content">
-      <div class="links-stack">
+      <div class="link-grid">
         {% for link in links %}
-          <a class="{{ link.type }}" href="{{ link.url }}">{{ link.name }}</a>
+          <div>
+            <a class="icon {{ link.type }}" href="{{ link.url }}">{{ link.name }}</a>
+          </div>
         {% endfor %}
       </div>
       <div class="partners">

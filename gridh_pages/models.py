@@ -12,6 +12,7 @@ class Page(models.Model):
                     "BulletList": True, "OrderedList": True, "Blockquote": True, "Link": {"enableTarget": True, "protocols": ["http", "https"], },
         },
         sanitize=True)
+    order = models.PositiveSmallIntegerField()
 
     def __str__(self):
         return self.title

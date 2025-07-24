@@ -9,10 +9,11 @@ gridh-pages is a Django app to create simple static pages for django projects. I
 Quick start
 -----------
 
-1. Add "pages" to your INSTALLED_APPS setting like this::
+1. Add "pages" and the required "django_prose_editor" for richtext fields to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...,
+        "django_prose_editor",
         "gridh_pages",
     ]
 

@@ -6,7 +6,8 @@ build-backend = "setuptools.build_meta"
 name = "gridh-pages"
 version = "0.1"
 dependencies = [
-    "django>=5.2",
+    "django>=5.2, <6",
+    "django-prose-editor[sanitize]"
 ]
 description = "A Django app to create simple static pages for projects."
 readme = "README.rst"
@@ -19,7 +20,6 @@ classifiers = [
     "Framework :: Django",
     "Framework :: Django :: 5.2",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
