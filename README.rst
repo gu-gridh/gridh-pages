@@ -22,15 +22,16 @@ Quick start
     PAGES_PROJECT_INFO = {
         "PROJECT_NAME": "Great project name",
         "LINKS": [
-            {"name": "My cool link", "url": "https://example.com/example1", "type": "site-link"},
-            {"name": "Another cool link", "url": "https://example.com/example2", "type": "download-link"},
+            {"label": "My cool link", "url": "https://example.com/example1", "type": "site-link"},
+            {"label": "Another cool link", "url": "https://example.com/example2", "type": "download-link"},
             ...
         ],
         "PARTNERS": [
-            {"name": "partner", "url": "https://example.com/partner1"},
-            {"name": "another partner", "url": "https://example.com/partner2"},
+            {"label": "partner", "url": "https://example.com/partner1"},
+            {"label": "another partner", "url": "https://example.com/partner2"},
             ...
         ],
+        "EXTRA_NAV_URLS": {"label": "Contact", "url": "https://example.com/contact"},
     }
 
 3. Include the pages URLconf in your project urls.py like this::

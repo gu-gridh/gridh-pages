@@ -8,7 +8,9 @@ register = template.Library()
 @register.inclusion_tag('pages/navigation.html')
 def render_navigation():
     pages = Page.objects.all().order_by('order')
-    return {'pages': pages}
+    project_info = getattr(settings, 'PAGES_PROJECT_INFO', {})
+    return {'pages': pages,
+            'extra_nav_urls': project_info.get('EXTRA_NAV_URLS', [])}
 
 
 @register.inclusion_tag('pages/footer.html')

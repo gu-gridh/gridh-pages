@@ -3,5 +3,8 @@
       {% for page in pages %}
         <li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
       {% endfor %}
+      {% for extra_nav_url in extra_nav_urls %}
+        <li><a href="{{ extra_nav_url.url }}">{{ extra_nav_url.label }}</a></li>
+      {% endfor %}
     </ul>
 </nav>
