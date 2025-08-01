@@ -46,4 +46,6 @@ Quick start
 
 7. For each static page it looks for a .html file with the same name as the slug (e.g. ``about.html``). So you can overwrite it for each project in ``templates/pages/...`` if needed. Otherwise it falls back to a ``default.html`` which you can also overwrite. It also contains a ``base.html`` template with a basic navigation, main content block and footer that can be overwritten. It looks in that case for a ``minified.css`` in your project's static folder to load your css.
 
+7. If you want to use Matomo, add your MATOMO_URL and MATOMO_SITE_ID to your settings. 
+
 8. Visit the ``/pages/...`` URL to see your created pages.
