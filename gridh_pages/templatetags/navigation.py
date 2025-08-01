@@ -28,7 +28,7 @@ def project_name():
     return project_info.get('PROJECT_NAME', 'Default Project')
 
 
-@register.simple_tag
+@register.inclusion_tag('pages/matomo.html')
 def matomo():
     matomo = getattr(settings, 'MATOMO', {})
     return {
