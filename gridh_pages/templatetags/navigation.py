@@ -26,3 +26,12 @@ def render_footer():
 def project_name():
     project_info = getattr(settings, 'PAGES_PROJECT_INFO', {})
     return project_info.get('PROJECT_NAME', 'Default Project')
+
+
+@register.simple_tag
+def matomo():
+    matomo = getattr(settings, 'MATOMO', {})
+    return {
+        'url': matomo.get('MATOMO_URL', ''),
+        'site_id': matomo.get('MATOMO_SITE_ID', ''),
+    }
