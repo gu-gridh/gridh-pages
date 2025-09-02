@@ -9,7 +9,7 @@ class Page(models.Model):
     content = ProseEditorField(blank=True,
         extensions={"Bold": True, "Italic": True, "Underline": True,
                     "Heading": {"levels": [2, 3, 4]}, # Only allow h2, h3, h4
-                    "BulletList": True, "OrderedList": True, "Blockquote": True, "Link": {"enableTarget": True, "protocols": ["http", "https"], },
+                    "BulletList": True, "OrderedList": True, "ListItem": True, "Blockquote": True, "Link": {"enableTarget": True, "protocols": ["http", "https"], },
         },
         sanitize=True)
     order = models.PositiveSmallIntegerField()
