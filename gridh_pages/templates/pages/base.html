@@ -1,4 +1,5 @@
 {% load static %}
+{% load django_vite %}
 {% load navigation %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,9 +7,9 @@
     <title>{% project_name %}</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=2.0">
-    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,300,400,500,600&amp;display=swap">
-    <link rel="stylesheet" href="{% static 'css/minified.css' %}">
+    {% vite_asset "js/index.js" %}
     {% matomo %}
   </head>
   <body>

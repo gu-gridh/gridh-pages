@@ -13,6 +13,7 @@ Quick start
 
     INSTALLED_APPS = [
         ...,
+        "django_vite",
         "django_prose_editor",
         "gridh_pages",
     ]
@@ -44,7 +45,7 @@ Quick start
 
 6. You can create static pages with a title, a slug and a content block with dfferent options. Currently, the django app ``django_prose_editor`` is used for this richtext field which you have to include in your INSTALLED_APPS setting.
 
-7. For each static page it looks for a .html file with the same name as the slug (e.g. ``about.html``). So you can overwrite it for each project in ``templates/pages/...`` if needed. Otherwise it falls back to a ``default.html`` which you can also overwrite. It also contains a ``base.html`` template with a basic navigation, main content block and footer that can be overwritten. It looks in that case for a ``minified.css`` in your project's static folder to load your css.
+7. For each static page it looks for a .html file with the same name as the slug (e.g. ``about.html``). So you can overwrite it for each project in ``templates/pages/...`` if needed. Otherwise it falls back to a ``default.html`` which you can also overwrite. It also contains a ``base.html`` template with a basic navigation, main content block and footer that can be overwritten. 
 
 7. If you want to use Matomo, add your MATOMO_URL and MATOMO_SITE_ID to your settings. 
 
