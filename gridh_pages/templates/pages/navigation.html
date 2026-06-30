@@ -1,10 +1,12 @@
 <nav role="navigation">
-    <ul>
-      {% for page in pages %}
-        <li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
-      {% endfor %}
-      {% for extra_nav_url in extra_nav_urls %}
-        <li><a href="{{ extra_nav_url.url }}">{{ extra_nav_url.label }}</a></li>
-      {% endfor %}
-    </ul>
+  <ul>
+    {% for item in navigation_items %}
+      <li>
+        <a href="{{ item.get_url }}"
+           {% if item.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+          {{ item.label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </nav>

@@ -1,16 +1,14 @@
 from django import template
-from gridh_pages.models import Page
+from gridh_pages.models import NavigationItem
 from django.conf import settings
 
 register = template.Library()
 
-
 @register.inclusion_tag('pages/navigation.html')
 def render_navigation():
-    pages = Page.objects.all().order_by('order')
-    project_info = getattr(settings, 'PAGES_PROJECT_INFO', {})
-    return {'pages': pages,
-            'extra_nav_urls': project_info.get('EXTRA_NAV_URLS', [])}
+    return {
+        "navigation_items": NavigationItem.objects.all().order_by('order')
+    }
 
 
 @register.inclusion_tag('pages/footer.html')

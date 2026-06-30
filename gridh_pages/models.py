@@ -12,10 +12,33 @@ class Page(models.Model):
                     "BulletList": True, "OrderedList": True, "ListItem": True, "Blockquote": True, "Link": {"enableTarget": True, "protocols": ["http", "https"], },
         },
         sanitize=True)
-    order = models.PositiveSmallIntegerField()
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         return reverse('pages', kwargs={'slug': self.slug})
+
+
+class NavigationItem(models.Model):
+    label = models.CharField(max_length=100)
+    page = models.ForeignKey(
+        Page,
+        blank=True,
+        null=True,
+        on_delete=models.CASCADE,
+    )
+    url = models.URLField(blank=True)
+    order = models.PositiveIntegerField(default=0)
+    open_in_new_tab = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["order"]
+
+    def get_url(self):
+        if self.page:
+            return self.page.get_absolute_url()
+        return self.url
+
+    def __str__(self):
+        return self.label
