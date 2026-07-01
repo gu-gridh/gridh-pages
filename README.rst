@@ -31,8 +31,7 @@ Quick start
             {"label": "partner", "url": "https://example.com/partner1"},
             {"label": "another partner", "url": "https://example.com/partner2"},
             ...
-        ],
-        "EXTRA_NAV_URLS": {"label": "Contact", "url": "https://example.com/contact"},
+        ]
     }
 
 3. Include the pages URLconf in your project urls.py like this::
@@ -43,7 +42,7 @@ Quick start
 
 5. Start the development server and visit the admin to create a static pages.
 
-6. You can create static pages with a title, a slug and a content block with dfferent options. Currently, the django app ``django_prose_editor`` is used for this richtext field which you have to include in your INSTALLED_APPS setting.
+6. You can create static pages with a title, a slug and a content block with different options. Currently, the django app ``django_prose_editor`` is used for this richtext field which you have to include in your INSTALLED_APPS setting.
 
 7. For each static page it looks for a .html file with the same name as the slug (e.g. ``about.html``). So you can overwrite it for each project in ``templates/pages/...`` if needed. Otherwise it falls back to a ``default.html`` which you can also overwrite. It also contains a ``base.html`` template with a basic navigation, main content block and footer that can be overwritten. 
 
