@@ -4,6 +4,7 @@ from django.conf import settings
 
 register = template.Library()
 
+
 @register.inclusion_tag('pages/navigation.html')
 def render_navigation():
     return {
