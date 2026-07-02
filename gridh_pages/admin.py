@@ -12,5 +12,5 @@ class PageAdmin(admin.ModelAdmin):
 
 @admin.register(NavigationItem)
 class NavigationItemAdmin(admin.ModelAdmin):
-    list_display = ("label", "page", "external_url", "order", "open_in_new_tab")
-    list_editable = ("order")
+    list_display = ("label", "page", "url", "order", "open_in_new_tab")
+    list_editable = ["order"]
