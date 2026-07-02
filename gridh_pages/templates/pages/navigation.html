@@ -4,7 +4,7 @@
       <li>
         <a href="{{ item.get_url }}"
            {% if item.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
-          {{ item.label }}
+          {{ item.label }}{% if item.open_in_new_tab %} ↗{% endif %}
         </a>
       </li>
     {% endfor %}
