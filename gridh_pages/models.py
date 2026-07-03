@@ -10,7 +10,7 @@ class Page(models.Model):
         extensions={"Bold": True, "Italic": True, "Underline": True,
                     "Heading": {"levels": [2, 3, 4]}, # Only allow h2, h3, h4
                     "BulletList": True, "OrderedList": True, "ListItem": True, "Blockquote": True, "Link": {"enableTarget": True,
-                    "Image": True, "Figure": True, "protocols": ["http", "https"], },
+                    "Figure": {"pickerUrl": ""}, "protocols": ["http", "https"], },
         },
         sanitize=True)
 
