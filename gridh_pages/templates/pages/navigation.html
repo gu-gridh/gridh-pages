@@ -3,8 +3,8 @@
     {% for item in navigation_items %}
       <li>
         <a href="{{ item.get_url }}"
-           {% if item.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
-          {{ item.label }}{% if item.open_in_new_tab %} ↗{% endif %}
+           {% if item.open_in_new_tab %}target="_blank" rel="noopener" class="external-link"{% endif %}>
+          {{ item.label }}
         </a>
       </li>
     {% endfor %}
